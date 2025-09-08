@@ -6,7 +6,7 @@
   <title>Usman Saleem – Senior DevOps Engineer</title>
   <style>
     :root{
-      --bg:#f8fafd;
+      --bg:#f9fbfd; /* lighter top bg */
       --card:#fff;
       --ink:#1c2430;
       --muted:#64748b;
@@ -20,21 +20,14 @@
       color:var(--ink);
       line-height:1.6;
       background-color:var(--bg);
-      background-image: url('data:image/svg+xml;utf8,\
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" opacity="0.15">\
-  <text x="20" y="40" font-size="32">🐧</text>\
-  <text x="120" y="60" font-size="32">🐳</text>\
-  <text x="60" y="120" font-size="32">☸️</text>\
-  <text x="160" y="140" font-size="32">⚙️</text>\
-  <text x="40" y="180" font-size="32">📦</text>\
-</svg>');
-      background-repeat: repeat;
-      background-size: 200px;
+      background-image:url('devops-bg-pattern.png'); /* black & white tools background */
+      background-repeat:repeat;
+      background-size:220px;
     }
 
     /* HERO */
     header{
-      background: linear-gradient(135deg,#263b4a,#375263,#456779);
+      background: linear-gradient(135deg,#2d4252,#3f5669,#4c6d82);
       color:#fff;
       text-align:center;
       padding:56px 16px 84px;
@@ -47,7 +40,7 @@
     /* LAYOUT */
     .container{max-width:1000px;margin:-64px auto 40px;padding:0 16px}
     .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
-      padding:24px;margin:20px 0;}
+      padding:24px;margin:32px 0;}
     h2{font-size:1.35rem;margin:0 0 16px;color:var(--ink);
       padding-left:10px;border-left:4px solid var(--accent)}
 
@@ -59,10 +52,10 @@
       text-decoration:none;color:#fff;
       transition: transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease, opacity .2s;
       box-shadow:0 6px 14px rgba(0,0,0,.12);}
-    .btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.22);opacity:.98}
+    .btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 30px rgba(0,0,0,.25);opacity:.98}
     .links .btn img{width:20px;height:20px;filter:brightness(0) invert(1)}
     .btn.linkedin{background:#0077b5}
-    .btn.github{background:#24292e}
+    .btn.github{background:#333}
     .btn.email{background:#d14836}
     .btn.resume{background:#2563eb}
 
@@ -78,12 +71,13 @@
     .clouds{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:8px}
     .clouds img{height:42px}
 
-    /* Cert badges - single image */
-    .badge-row{display:flex;justify-content:center;margin-top:12px}
+    /* Cert badges */
+    .badge-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:12px}
     .aws-badge{
-      max-width:480px; height:auto;
+      width:160px; height:160px;
       object-fit:contain;
-      border-radius:12px;background:white;padding:12px;
+      border-radius:12px;background:white;padding:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
     }
 
     .subtle{color:var(--muted)}
@@ -102,7 +96,7 @@
       <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="">LinkedIn</a>
       <a class="btn github" href="https://github.com/ug-devops" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="">GitHub</a>
       <a class="btn email" href="mailto:ug.khan@hotmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="">Email</a>
-      <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="">Resume</a>
+      <a class="btn resume" href="DevOps%20Resume%20-%20Usman%20Saleem.pdf" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="">Resume</a>
     </div>
   </header>
 
@@ -136,7 +130,7 @@
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linux.svg" alt="">Linux</div>
-        <div class="skill"><img src="logo-openshift.png" alt="OpenShift" onerror="this.src='https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openshift.svg'">OpenShift</div>
+        <div class="skill"><img src="logo-openshift.png" alt="OpenShift">OpenShift</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt="">Kubernetes</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="">Docker</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/terraform.svg" alt="">Terraform</div>
@@ -147,7 +141,6 @@
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/prometheus.svg" alt="">Prometheus</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/grafana.svg" alt="">Grafana</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/elastic.svg" alt="">ELK Stack</div>
-        <!-- Added AWS and Azure -->
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS">AWS</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure">Azure</div>
       </div>
@@ -167,7 +160,9 @@
     <section class="card">
       <h2>Certifications</h2>
       <div class="badge-row">
-        <img class="aws-badge" src="all-badges.png" alt="All Certifications">
+        <img class="aws-badge" src="devops-professional.png" alt="AWS DevOps Engineer - Professional">
+        <img class="aws-badge" src="solutions-architect-associate.png" alt="AWS Solutions Architect - Associate">
+        <img class="aws-badge" src="aws-ccp.png" alt="AWS Cloud Practitioner">
       </div>
     </section>
 
@@ -179,7 +174,7 @@
         <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="">LinkedIn</a>
         <a class="btn github" href="https://github.com/ug-devops" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="">GitHub</a>
         <a class="btn email" href="mailto:ug.khan@hotmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="">Email</a>
-        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="">Resume</a>
+        <a class="btn resume" href="DevOps%20Resume%20-%20Usman%20Saleem.pdf" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="">Resume</a>
       </div>
     </section>
 
