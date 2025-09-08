@@ -6,77 +6,130 @@
   <title>Usman Saleem – Senior DevOps Engineer</title>
   <meta name="description" content="Usman Saleem – Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast" />
   <style>
-    :root{
+    :root {
       --bg: #f4f7fb;
       --card: #ffffff;
       --ink: #1c2430;
-      --muted:#64748b;
-      --brand:#0e76a8;
-      --brand2:#2c5364;
-      --shadow: 0 8px 28px rgba(0,0,0,.12);
+      --muted: #64748b;
+      --brand: #0e76a8;
+      --brand2: #2c5364;
+      --shadow: 0 8px 28px rgba(0, 0, 0, .12);
       --radius: 16px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
+    * { box-sizing: border-box }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      line-height:1.65;
+      line-height: 1.65;
     }
-    header{
-      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:#fff; text-align:center; padding:56px 16px 84px;
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 56px 16px 84px;
     }
-    header .avatar{
-      width:168px; height:168px; border-radius:50%; object-fit:cover;
-      border:4px solid #fff; box-shadow: var(--shadow); display:block; margin:0 auto 16px;
+    header .avatar {
+      width: 168px;
+      height: 168px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: var(--shadow);
+      display: block;
+      margin: 0 auto 16px;
     }
-    header h1{font-size:2.4rem; margin:6px 0 6px}
-    header p{margin:0; opacity:.95; font-size:1.05rem}
-    .container{
-      max-width:1000px; margin:-64px auto 40px; padding:0 16px;
+    header h1 {
+      font-size: 2.4rem;
+      margin: 6px 0 6px;
     }
-    .card{
-      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
-      padding:24px;
+    header p {
+      margin: 0;
+      opacity: .95;
+      font-size: 1.05rem;
     }
-    section{margin-bottom:28px}
-    h2{
-      font-size:1.35rem; margin:0 0 12px; color:var(--brand);
-      display:inline-block; border-bottom:2px solid var(--brand); padding-bottom:4px;
+    .container {
+      max-width: 1000px;
+      margin: -64px auto 40px;
+      padding: 0 16px;
     }
-    .links{
-      display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:16px;
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
     }
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 16px; border-radius:999px; text-decoration:none; color:#fff; font-weight:600;
+    section { margin-bottom: 28px }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 16px;
+      color: var(--ink);
+      padding-left: 10px;
+      border-left: 4px solid var(--brand);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
       transition: transform .2s ease, opacity .2s ease;
     }
-    .btn:hover{transform:translateY(-2px); opacity:.92}
-    .btn.linkedin{background:#0e76a8}
-    .btn.github{background:#24292e}
-    .btn.email{background:#d44638}
-    .btn.resume{background:var(--brand2)}
-    .grid{
-      display:grid; gap:16px;
+    .btn img { width: 20px; height: 20px; }
+    .btn:hover { transform: translateY(-2px); opacity: .92 }
+    .btn.linkedin { background: #0e76a8 }
+    .btn.github { background: #24292e }
+    .btn.email { background: #d44638 }
+    .btn.resume { background: var(--brand2) }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 1.2fr .8fr }
     }
-    @media (min-width: 720px){
-      .about-grid{grid-template-columns: 1.2fr .8fr}
+    .pillset { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px }
+    .pill {
+      background: #e7edf6;
+      color: #0a2647;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 600;
+      font-size: .93rem;
     }
-    .pillset{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
-    .pill{
-      background:#e7edf6; color:#0a2647; border-radius:999px; padding:6px 12px; font-weight:600; font-size:.93rem;
+    .clouds {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
     }
-    .clouds{display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-top:8px}
-    .clouds img{height:42px}
-    .list{margin:8px 0 0 20px}
-    .subtle{color:var(--muted)}
-    .badge-row{display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-top:10px}
-    .aws-badge{height:70px; width:auto}
-    footer{color:#6b7280; text-align:center; padding:22px 16px}
-    /* nice details */
-    .lead{font-size:1.05rem}
-    .divider{height:1px; background:#e5e7eb; margin:16px 0}
+    .clouds img { height: 42px }
+    .list { margin: 8px 0 0 20px }
+    .subtle { color: var(--muted) }
+    .badge-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .aws-badge { height: 80px; width: auto }
+    footer {
+      color: #6b7280;
+      text-align: center;
+      padding: 22px 16px;
+    }
+    .lead { font-size: 1.05rem }
+    .divider { height: 1px; background: #e5e7eb; margin: 16px 0 }
   </style>
 </head>
 <body>
@@ -88,10 +141,18 @@
     <p>Senior DevOps Engineer · AWS Certified · Kubernetes · Automation Enthusiast</p>
 
     <div class="links" aria-label="Primary links">
-      <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-      <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-      <a class="btn email" href="mailto:ug.khan@hotmail.com" aria-label="Email">Email</a>
-      <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener" aria-label="Resume">Resume</a>
+      <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""> LinkedIn
+      </a>
+      <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> GitHub
+      </a>
+      <a class="btn email" href="mailto:ug.khan@hotmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt=""> Email
+      </a>
+      <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt=""> Resume
+      </a>
     </div>
   </header>
 
@@ -101,7 +162,7 @@
     <section class="card">
       <div class="grid about-grid">
         <div>
-          <h2>About</h2>
+          <h2>About Me</h2>
           <p class="lead"><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
 
           <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
@@ -157,36 +218,39 @@
 
           <h2>Cloud Platforms</h2>
           <div class="clouds">
-            <!-- AWS -->
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS logo" />
-            <!-- Azure -->
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure logo" />
-            <!-- GCP -->
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud Platform logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/5969/5969123.png" alt="AWS logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft Azure logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="Google Cloud Platform logo" />
           </div>
 
           <div class="divider"></div>
 
           <h2>Certifications</h2>
           <div class="badge-row">
-            <span class="pill">AWS Certified</span>
-            <!-- Official-style Cloud Practitioner badge (Credly hosted) -->
-            <img class="aws-badge" src="https://images.credly.com/size/340x340/images/6848b286-21f6-4e4b-81d8-8388a8deea97/AWS-CloudPractitioner-2020.png" alt="AWS Certified Cloud Practitioner badge" />
+            <img class="aws-badge" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-Cloud-Practitioner_badge.9d1a5e6cdab7a55d14eecf3db5e6b6f5e9a41d89.png" alt="AWS Certified Cloud Practitioner badge" />
           </div>
-          <p class="subtle">Plus: DevOps Engineer – Professional, Solutions Architect – Associate.</p>
+          <p class="subtle">Also: AWS DevOps Engineer – Professional, AWS Solutions Architect – Associate.</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT LINKS (secondary) -->
     <section class="card">
-      <h2>Connect</h2>
+      <h2>Connect with Me</h2>
       <p class="subtle">I’m always open to discussing DevOps, cloud, and automation initiatives.</p>
       <div class="links">
-        <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn email" href="mailto:ug.khan@hotmail.com">Email</a>
-        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">Resume</a>
+        <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""> LinkedIn
+        </a>
+        <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> GitHub
+        </a>
+        <a class="btn email" href="mailto:ug.khan@hotmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt=""> Email
+        </a>
+        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt=""> Resume
+        </a>
       </div>
     </section>
 
