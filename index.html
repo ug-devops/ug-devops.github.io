@@ -1,222 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Usman Saleem – Senior DevOps Engineer</title>
   <meta name="description" content="Usman Saleem – Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast" />
   <style>
-    :root {
-      --bg: #f4f7fb;
-      --card: #ffffff;
-      --ink: #1c2430;
-      --muted: #64748b;
-      --shadow: 0 8px 28px rgba(0, 0, 0, .12);
-      --radius: 16px;
+    :root{
+      --bg:#f4f7fb;
+      --card:#fff;
+      --ink:#1c2430;
+      --muted:#64748b;
+      --accent:#2563eb;
+      --shadow:0 8px 28px rgba(0,0,0,.12);
+      --radius:16px;
     }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.65;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
     }
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
-      padding: 56px 16px 84px;
+
+    /* HERO */
+    header{
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      text-align:center;
+      padding:56px 16px 84px;
     }
-    header .avatar {
-      width: 168px;
-      height: 168px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: var(--shadow);
-      display: block;
-      margin: 0 auto 16px;
+    .avatar{
+      width:168px;height:168px;border-radius:50%;object-fit:cover;
+      border:4px solid #fff; box-shadow:var(--shadow); display:block;margin:0 auto 16px;
     }
-    header h1 {
-      font-size: 2.4rem;
-      margin: 6px 0 6px;
+    header h1{font-size:2.4rem;margin:6px 0}
+    header p{margin:0;opacity:.95;font-size:1.05rem}
+
+    /* LAYOUT */
+    .container{max-width:1000px;margin:-64px auto 40px;padding:0 16px}
+    /* card spacing and separation */
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:24px; margin:18px 0; /* IMPORTANT: gives space between sections */
     }
-    .container {
-      max-width: 1000px;
-      margin: -64px auto 40px;
-      padding: 0 16px;
+
+    h2{
+      font-size:1.35rem; margin:0 0 16px; color:var(--ink);
+      padding-left:10px; border-left:4px solid var(--accent);
     }
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
+
+    /* Primary buttons (header) */
+    .links{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 16px; border-radius:999px; font-weight:600;
+      text-decoration:none; color:#fff; transition:transform .18s ease,opacity .18s;
     }
-    h2 {
-      font-size: 1.35rem;
-      margin: 0 0 16px;
-      padding-left: 10px;
-      border-left: 4px solid #2563eb;
+    /* only icons inside header buttons are inverted to white so they show on colored backgrounds */
+    .links .btn img{width:20px;height:20px; filter:brightness(0) invert(1)}
+
+    .btn.linkedin{background:#0077b5}
+    .btn.github{background:#24292e} /* updated GitHub button color */
+    .btn.email{background:#d14836}
+    .btn.resume{background:#2563eb}
+
+    /* ABOUT / SKILLS layout */
+    .grid{display:grid; gap:16px}
+    @media(min-width:720px){ .about-grid{grid-template-columns:1.2fr .8fr} }
+
+    /* Skills grid (logos + names) */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+      gap:14px; margin-top:8px;
     }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 16px;
+    .skill{
+      background:#f9fafb; border-radius:12px; padding:12px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      box-shadow: inset 0 0 2px rgba(0,0,0,0.03);
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-    .btn img { width: 20px; height: 20px }
-    .btn:hover { transform: translateY(-2px); opacity: .92 }
-    .linkedin { background: #0077b5 }
-    .github { background: #24292e }
-    .email { background: #d14836 }
-    .resume { background: #2563eb }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 14px;
-      margin-top: 8px;
-      text-align: center;
-    }
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #f9fafb;
-      border-radius: 12px;
-      padding: 12px;
-      box-shadow: inset 0 0 2px rgba(0,0,0,0.05);
-    }
-    .skill img {
-      height: 36px;
-      margin-bottom: 6px;
-    }
-    .clouds {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-    .clouds img { height: 42px }
-    .badge-row {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    .aws-badge { height: 100px; width: auto }
-    footer {
-      color: #6b7280;
-      text-align: center;
-      padding: 22px 16px;
-    }
+    .skill img{height:36px; margin-bottom:8px}
+
+    /* Clouds */
+    .clouds{display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-top:8px}
+    .clouds img{height:42px}
+
+    /* Certifications row */
+    .badge-row{display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-top:10px}
+    .aws-badge{height:100px; width:auto}
+
+    /* misc */
+    .subtle{color:var(--muted)}
+    a { color: inherit }
+    footer{color:#6b7280;text-align:center;padding:22px 16px}
   </style>
 </head>
 <body>
 
   <!-- HERO -->
   <header>
-    <img class="avatar" src="profile-pic-suit-v2.jpg" alt="Portrait of Usman Saleem" />
+    <img class="avatar" src="profile-pic-suit-v2.jpg" alt="Usman Saleem" />
     <h1>Usman Saleem</h1>
     <p>Senior DevOps Engineer · AWS Certified · Kubernetes · Automation Enthusiast</p>
 
-    <div class="links">
+    <div class="links" aria-label="Primary links">
+      <!-- Using simple-icons SVGs as img; inverted to white via CSS so they are visible on colored buttons -->
       <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn icon">LinkedIn
       </a>
+
       <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"> GitHub
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub icon">GitHub
       </a>
+
       <a class="btn email" href="mailto:ug.khan@hotmail.com">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email"> Email
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email icon">Email
       </a>
+
       <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Resume"> Resume
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Resume icon">Resume
       </a>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- ABOUT -->
+    <!-- ABOUT (full bio unchanged) -->
     <section class="card">
-      <h2>About Me</h2>
-      <p><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
-      <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
-      <p><strong>Core Expertise:</strong></p>
-      <ul>
-        <li>DevOps Tools & Platforms: Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
-        <li>Cloud & Automation: Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
-        <li>Version Control & CI/CD Pipelines: Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
-      </ul>
-      <p><strong>AWS Certifications:</strong></p>
-      <ul>
-        <li>AWS Certified DevOps Engineer - Professional</li>
-        <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
-        <li>AWS Certified Cloud Practitioner</li>
-      </ul>
-      <p><strong>Passion for Cybersecurity:</strong> I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
-      <p><strong>Ongoing Learning:</strong> Currently exploring ArgoCD, Python, SonarQube, GitHub Actions, WSO2, and Ansible.</p>
-      <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
-    </section>
+      <div class="grid about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
 
-    <!-- SKILLS -->
-    <section class="card">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linux.svg" alt="Linux"><span>Linux</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openshift.svg" alt="OpenShift"><span>OpenShift</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt="Kubernetes"><span>Kubernetes</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="Docker"><span>Docker</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/terraform.svg" alt="Terraform"><span>Terraform</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt="Jenkins"><span>Jenkins</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gitlab.svg" alt="GitLab"><span>GitLab</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt="Ansible"><span>Ansible</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/prometheus.svg" alt="Prometheus"><span>Prometheus</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/grafana.svg" alt="Grafana"><span>Grafana</span></div>
-        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/elasticstack.svg" alt="ELK Stack"><span>ELK Stack</span></div>
+          <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
+
+          <p><strong>Core Expertise:</strong></p>
+          <ul>
+            <li>DevOps Tools & Platforms: Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
+            <li>Cloud & Automation: Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
+            <li>Version Control & CI/CD Pipelines: Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
+          </ul>
+
+          <p><strong>AWS Certifications:</strong></p>
+          <ul>
+            <li>AWS Certified DevOps Engineer - Professional</li>
+            <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
+            <li>AWS Certified Cloud Practitioner</li>
+          </ul>
+
+          <p><strong>Passion for Cybersecurity:</strong> Alongside my core DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
+
+          <p><strong>Ongoing Learning &amp; Projects:</strong> In addition to my current skill set, I’m continuously exploring and integrating new technologies into my workflow to stay ahead of the curve. Some of the tools and platforms I'm currently learning and working on include: ArgoCD, Python, SonarQube, GitHub Actions, WSO2, and Ansible.</p>
+
+          <p>I am always eager to learn and grow in the field of DevOps, bringing value to every project I contribute to. If you're looking for someone who can optimize your cloud and DevOps practices, let's connect!</p>
+
+          <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
+        </div>
+
+        <!-- Right column (snapshot -> SKILLS summary) -->
+        <div>
+          <h2>Skills</h2>
+
+          <div class="skills-grid" aria-label="Skills">
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linux.svg" alt="Linux">
+              <div>Linux</div>
+            </div>
+
+            <div class="skill">
+              <!-- local OpenShift logo with fallback to CDN if the local file is missing -->
+              <img src="logo-openshift.png" alt="OpenShift" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openshift.svg'">
+              <div>OpenShift</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt="Kubernetes">
+              <div>Kubernetes</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="Docker">
+              <div>Docker</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/terraform.svg" alt="Terraform">
+              <div>Terraform</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt="Jenkins">
+              <div>Jenkins</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+              <div>GitHub</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gitlab.svg" alt="GitLab">
+              <div>GitLab</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt="Ansible">
+              <div>Ansible</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/prometheus.svg" alt="Prometheus">
+              <div>Prometheus</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/grafana.svg" alt="Grafana">
+              <div>Grafana</div>
+            </div>
+
+            <div class="skill">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/elastic.svg" alt="ELK Stack">
+              <div>ELK Stack</div>
+            </div>
+          </div>
+
+          <div style="height:14px"></div>
+
+          <h2>Cloud Platforms</h2>
+          <div class="clouds">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="GCP">
+          </div>
+
+          <div style="height:12px"></div>
+
+          <h2>Certifications</h2>
+          <div class="badge-row">
+            <!-- local Cloud Practitioner image (aws-ccp.png) with CDN fallback -->
+            <img class="aws-badge" src="aws-ccp.png" alt="AWS Cloud Practitioner" 
+                 onerror="this.onerror=null;this.src='https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-Cloud-Practitioner_badge.png'">
+
+            <!-- local DevOps Pro with CDN fallback -->
+            <img class="aws-badge" src="devops-professional.png" alt="AWS DevOps Engineer - Professional"
+                 onerror="this.onerror=null;this.src='https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-DevOps-Engineer-Professional_badge.png'">
+
+            <!-- local Solutions Architect Associate with CDN fallback -->
+            <img class="aws-badge" src="solutions-architect-associate.png" alt="AWS Solutions Architect - Associate"
+                 onerror="this.onerror=null;this.src='https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-Solutions-Architect-Associate_badge.png'">
+          </div>
+
+          <p class="subtle" style="margin-top:10px">Also: AWS DevOps Engineer – Professional, AWS Solutions Architect – Associate.</p>
+        </div>
       </div>
     </section>
 
-    <!-- CLOUDS -->
+    <!-- CONTACT / CONNECT -->
     <section class="card">
-      <h2>Cloud Platforms</h2>
-      <div class="clouds">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS logo" />
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure logo" />
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud logo" />
-      </div>
-    </section>
+      <h2>Connect with Me</h2>
+      <p class="subtle">I’m always open to discussing DevOps, cloud, and automation initiatives.</p>
 
-    <!-- CERTIFICATIONS -->
-    <section class="card">
-      <h2>Certifications</h2>
-      <div class="badge-row">
-        <img class="aws-badge" src="aws-ccp.png" alt="AWS Certified Cloud Practitioner badge" />
-        <img class="aws-badge" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-DevOps-Engineer-Professional_badge.png" alt="AWS Certified DevOps Engineer Professional badge" />
-        <img class="aws-badge" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-Solutions-Architect-Associate_badge.png" alt="AWS Certified Solutions Architect Associate badge" />
+      <div class="links">
+        <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
+        </a>
+
+        <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"> GitHub
+        </a>
+
+        <a class="btn email" href="mailto:ug.khan@hotmail.com">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email"> Email
+        </a>
+
+        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Resume"> Resume
+        </a>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    © 2025 Usman Saleem · Built with ❤️ and a DevOps mindset
-  </footer>
+  <footer>© 2025 Usman Saleem · Built with ❤️ and a DevOps mindset</footer>
 </body>
 </html>
 
