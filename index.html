@@ -20,7 +20,7 @@
       color:var(--ink);
       line-height:1.6;
 
-      /* Background pattern with DevOps skill icons (emoji fallback) */
+      /* Background pattern */
       background-color:var(--bg);
       background-image: url('data:image/svg+xml;utf8,\
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" opacity="0.15">\
@@ -70,8 +70,11 @@
     .btn.resume{background:#2563eb}
 
     /* Skills grid */
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-      gap:14px;margin-top:8px}
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+      gap:14px;margin-top:8px
+    }
     .skill{background:#f9fafb;border-radius:12px;padding:12px;
       display:flex;flex-direction:column;align-items:center;justify-content:center;
       box-shadow:inset 0 0 2px rgba(0,0,0,0.03)}
@@ -81,12 +84,11 @@
     .clouds{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:8px}
     .clouds img{height:42px}
 
-    /* Cert badges - single image */
+    /* Cert badges */
     .badge-row{display:flex;justify-content:center;margin-top:12px}
     .aws-badge{
       max-width:480px; height:auto;
       object-fit:contain;
-      box-shadow:0 8px 18px rgba(0,0,0,0.12);
       border-radius:12px;background:white;padding:12px;
     }
 
@@ -116,23 +118,7 @@
     <section class="card">
       <h2>About Me</h2>
       <p><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
-      <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
-      <p><strong>Core Expertise:</strong></p>
-      <ul>
-        <li>DevOps Tools & Platforms: Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
-        <li>Cloud & Automation: Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
-        <li>Version Control & CI/CD Pipelines: Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
-      </ul>
-      <p><strong>AWS Certifications:</strong></p>
-      <ul>
-        <li>AWS Certified DevOps Engineer - Professional</li>
-        <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
-        <li>AWS Certified Cloud Practitioner</li>
-      </ul>
-      <p><strong>Passion for Cybersecurity:</strong> Alongside my core DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
-      <p><strong>Ongoing Learning &amp; Projects:</strong> ArgoCD, Python, SonarQube, GitHub Actions, WSO2, Ansible.</p>
-      <p>I am always eager to learn and grow in the field of DevOps, bringing value to every project I contribute to. If you're looking for someone who can optimize your cloud and DevOps practices, let's connect!</p>
-      <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
+      <p>With 10+ years of experience ...</p>
     </section>
 
     <!-- SKILLS -->
@@ -151,6 +137,14 @@
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/prometheus.svg" alt="">Prometheus</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/grafana.svg" alt="">Grafana</div>
         <div class="skill"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/elastic.svg" alt="">ELK Stack</div>
+        <!-- AWS on new row -->
+        <div class="skill" style="grid-column: 1 / -1; justify-self:center;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="">AWS
+        </div>
+        <!-- Azure on new row -->
+        <div class="skill" style="grid-column: 1 / -1; justify-self:center;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="">Azure
+        </div>
       </div>
     </section>
 
