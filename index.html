@@ -6,7 +6,7 @@
   <title>Usman Saleem – Senior DevOps Engineer</title>
   <style>
     :root{
-      --bg:#f9fbfd; /* lighter top bg */
+      --bg:#f9fbfd;
       --card:#fff;
       --ink:#1c2430;
       --muted:#64748b;
@@ -20,7 +20,7 @@
       color:var(--ink);
       line-height:1.6;
       background-color:var(--bg);
-      background-image:url('devops-bg-pattern.png'); /* black & white tools background */
+      background-image:url('devops-bg-pattern.png');
       background-repeat:repeat;
       background-size:220px;
     }
@@ -74,10 +74,13 @@
     /* Cert badges - all in one image */
     .badge-row{display:flex;justify-content:center;margin-top:12px}
     .aws-badge{
-      max-width:720px; height:auto;
+      max-width:480px; /* smaller */
+      height:auto;
       object-fit:contain;
-      border-radius:16px;background:white;padding:16px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      border-radius:12px;
+      background:white;
+      padding:12px;
+      /* removed shadow */
     }
 
     .subtle{color:var(--muted)}
