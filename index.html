@@ -20,18 +20,18 @@
       color:var(--ink);
       line-height:1.6;
 
-      /* SVG DevOps tools pattern */
+      /* SVG DevOps tools pattern (black/white icons, low opacity) */
       background-color:var(--bg);
       background-image: url('data:image/svg+xml;utf8,\
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="black" opacity="0.05">\
-  <text x="20" y="40" font-size="28" font-family="monospace">🐳</text>\
-  <text x="120" y="60" font-size="28" font-family="monospace">☸️</text>\
-  <text x="60" y="120" font-size="28" font-family="monospace">⚙️</text>\
-  <text x="150" y="150" font-size="28" font-family="monospace">☁️</text>\
-  <text x="30" y="180" font-size="28" font-family="monospace">🔒</text>\
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="black" opacity="0.04">\
+  <image href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" x="20" y="20" width="40" height="40"/>\
+  <image href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" x="120" y="40" width="40" height="40"/>\
+  <image href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" x="60" y="120" width="40" height="40"/>\
+  <image href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/terraform.svg" x="150" y="150" width="40" height="40"/>\
+  <image href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" x="40" y="160" width="36" height="36"/>\
 </svg>');
       background-repeat: repeat;
-      background-size: 180px;
+      background-size: 200px;
     }
 
     /* HERO */
@@ -82,10 +82,16 @@
     .clouds img{height:42px}
 
     /* Cert badges uniform size */
-    .badge-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:12px;justify-content:center}
-    .aws-badge{height:140px;width:auto;object-fit:contain;
+    .badge-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:16px;justify-content:center}
+    .aws-badge{
+      height:160px; /* Bigger and uniform */
+      width:160px;  /* force square container */
+      object-fit:contain;
       box-shadow:0 8px 18px rgba(0,0,0,0.12);
-      border-radius:8px;background:white;padding:6px}
+      border-radius:12px;
+      background:white;
+      padding:8px;
+    }
 
     .subtle{color:var(--muted)}
     footer{color:#6b7280;text-align:center;padding:22px 16px}
@@ -113,23 +119,7 @@
     <section class="card">
       <h2>About Me</h2>
       <p><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
-      <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
-      <p><strong>Core Expertise:</strong></p>
-      <ul>
-        <li>DevOps Tools & Platforms: Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
-        <li>Cloud & Automation: Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
-        <li>Version Control & CI/CD Pipelines: Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
-      </ul>
-      <p><strong>AWS Certifications:</strong></p>
-      <ul>
-        <li>AWS Certified DevOps Engineer - Professional</li>
-        <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
-        <li>AWS Certified Cloud Practitioner</li>
-      </ul>
-      <p><strong>Passion for Cybersecurity:</strong> Alongside my core DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
-      <p><strong>Ongoing Learning &amp; Projects:</strong> ArgoCD, Python, SonarQube, GitHub Actions, WSO2, Ansible.</p>
-      <p>I am always eager to learn and grow in the field of DevOps, bringing value to every project I contribute to. If you're looking for someone who can optimize your cloud and DevOps practices, let's connect!</p>
-      <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
+      <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions...</p>
     </section>
 
     <!-- SKILLS -->
