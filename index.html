@@ -1,191 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Usman – Senior DevOps Engineer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Usman Saleem – Senior DevOps Engineer</title>
+  <meta name="description" content="Usman Saleem – Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #f4f7fb;
+    :root{
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --ink: #1c2430;
+      --muted:#64748b;
+      --brand:#0e76a8;
+      --brand2:#2c5364;
+      --shadow: 0 8px 28px rgba(0,0,0,.12);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      line-height: 1.6;
+      line-height:1.65;
     }
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem 4rem 1rem;
+    header{
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff; text-align:center; padding:56px 16px 84px;
     }
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      margin-bottom: 1rem;
+    header .avatar{
+      width:168px; height:168px; border-radius:50%; object-fit:cover;
+      border:4px solid #fff; box-shadow: var(--shadow); display:block; margin:0 auto 16px;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
+    header h1{font-size:2.4rem; margin:6px 0 6px}
+    header p{margin:0; opacity:.95; font-size:1.05rem}
+    .container{
+      max-width:1000px; margin:-64px auto 40px; padding:0 16px;
     }
-    header p {
-      font-size: 1.2rem;
-      margin: 0.3rem 0;
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:24px;
     }
-    .container {
-      max-width: 1000px;
-      margin: -50px auto 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
+    section{margin-bottom:28px}
+    h2{
+      font-size:1.35rem; margin:0 0 12px; color:var(--brand);
+      display:inline-block; border-bottom:2px solid var(--brand); padding-bottom:4px;
     }
-    section {
-      margin-bottom: 2.5rem;
+    .links{
+      display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:16px;
     }
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #0e76a8;
-      border-bottom: 2px solid #0e76a8;
-      display: inline-block;
-      padding-bottom: 0.3rem;
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 16px; border-radius:999px; text-decoration:none; color:#fff; font-weight:600;
+      transition: transform .2s ease, opacity .2s ease;
     }
-    .skills, .certifications, .clouds {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 0.8rem;
+    .btn:hover{transform:translateY(-2px); opacity:.92}
+    .btn.linkedin{background:#0e76a8}
+    .btn.github{background:#24292e}
+    .btn.email{background:#d44638}
+    .btn.resume{background:var(--brand2)}
+    .grid{
+      display:grid; gap:16px;
     }
-    .skills span, .certifications span {
-      background: #e0e7f1;
-      color: #0a2647;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      font-weight: 500;
+    @media (min-width: 720px){
+      .about-grid{grid-template-columns: 1.2fr .8fr}
     }
-    .clouds img {
-      height: 45px;
+    .pillset{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
+    .pill{
+      background:#e7edf6; color:#0a2647; border-radius:999px; padding:6px 12px; font-weight:600; font-size:.93rem;
     }
-    ul {
-      margin: 0.5rem 0 0 1.2rem;
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      justify-content: center;
-    }
-    .links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0.8rem 1.4rem;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      color: white;
-    }
-    .links a.linkedin { background: #0e76a8; }
-    .links a.github { background: #24292e; }
-    .links a.email { background: #d44638; }
-    .links a.resume { background: #2c5364; }
-    .links a:hover {
-      transform: translateY(-3px);
-      opacity: 0.9;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 2rem;
-    }
+    .clouds{display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-top:8px}
+    .clouds img{height:42px}
+    .list{margin:8px 0 0 20px}
+    .subtle{color:var(--muted)}
+    .badge-row{display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-top:10px}
+    .aws-badge{height:70px; width:auto}
+    footer{color:#6b7280; text-align:center; padding:22px 16px}
+    /* nice details */
+    .lead{font-size:1.05rem}
+    .divider{height:1px; background:#e5e7eb; margin:16px 0}
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HERO -->
   <header>
-    <img src="profile-pic-suit-v2.jpg" alt="Usman Profile Picture">
-    <h1>Usman</h1>
-    <p>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</p>
+    <img class="avatar" src="profile-pic-suit-v2.jpg" alt="Portrait of Usman Saleem" />
+    <h1>Usman Saleem</h1>
+    <p>Senior DevOps Engineer · AWS Certified · Kubernetes · Automation Enthusiast</p>
+
+    <div class="links" aria-label="Primary links">
+      <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a class="btn email" href="mailto:ug.khan@hotmail.com" aria-label="Email">Email</a>
+      <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener" aria-label="Resume">Resume</a>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
+  <main class="container">
 
-    <!-- About Section -->
-    <section>
-      <h2>About Me</h2>
-      <p>
-        With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at Code UpScale, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.
-      </p>
-      <p>
-        Alongside my DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards. I’m continuously learning and integrating new technologies like ArgoCD, Python, SonarQube, GitHub Actions, WSO2, and Ansible to stay ahead of the curve.
-      </p>
-    </section>
+    <!-- ABOUT with full bio -->
+    <section class="card">
+      <div class="grid about-grid">
+        <div>
+          <h2>About</h2>
+          <p class="lead"><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
 
-    <!-- Skills Section -->
-    <section>
-      <h2>Core Expertise</h2>
-      <div class="skills">
-        <span>Linux</span>
-        <span>OpenShift</span>
-        <span>Kubernetes</span>
-        <span>Docker</span>
-        <span>Terraform</span>
-        <span>Jenkins</span>
-        <span>GitHub</span>
-        <span>GitLab CI/CD</span>
-        <span>Ansible</span>
-        <span>Prometheus</span>
-        <span>Grafana</span>
-        <span>ELK Stack</span>
+          <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
+
+          <p><strong>Core Expertise:</strong></p>
+          <ul class="list">
+            <li><strong>DevOps Tools &amp; Platforms:</strong> Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
+            <li><strong>Cloud &amp; Automation:</strong> Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
+            <li><strong>Version Control &amp; CI/CD Pipelines:</strong> Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
+          </ul>
+
+          <p><strong>AWS Certifications:</strong></p>
+          <ul class="list">
+            <li>AWS Certified DevOps Engineer - Professional</li>
+            <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
+            <li>AWS Certified Cloud Practitioner</li>
+          </ul>
+
+          <p><strong>Passion for Cybersecurity:</strong></p>
+          <p>Alongside my core DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
+
+          <p><strong>Ongoing Learning &amp; Projects:</strong></p>
+          <p>In addition to my current skill set, I’m continuously exploring and integrating new technologies into my workflow to stay ahead of the curve. Some of the tools and platforms I'm currently learning and working on include:</p>
+          <ul class="list">
+            <li>ArgoCD, Python, SonarQube</li>
+            <li>GitHub Actions, WSO2, Ansible</li>
+          </ul>
+
+          <p>I am always eager to learn and grow in the field of DevOps, bringing value to every project I contribute to. If you're looking for someone who can optimize your cloud and DevOps practices, let's connect!</p>
+
+          <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
+        </div>
+
+        <!-- quick summary card -->
+        <div>
+          <h2>Snapshot</h2>
+          <div class="pillset" aria-label="Key skills">
+            <span class="pill">Linux</span>
+            <span class="pill">OpenShift</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">GitLab CI/CD</span>
+            <span class="pill">Ansible</span>
+            <span class="pill">Prometheus</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">ELK Stack</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Cloud Platforms</h2>
+          <div class="clouds">
+            <!-- AWS -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS logo" />
+            <!-- Azure -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure logo" />
+            <!-- GCP -->
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud Platform logo" />
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Certifications</h2>
+          <div class="badge-row">
+            <span class="pill">AWS Certified</span>
+            <!-- Official-style Cloud Practitioner badge (Credly hosted) -->
+            <img class="aws-badge" src="https://images.credly.com/size/340x340/images/6848b286-21f6-4e4b-81d8-8388a8deea97/AWS-CloudPractitioner-2020.png" alt="AWS Certified Cloud Practitioner badge" />
+          </div>
+          <p class="subtle">Plus: DevOps Engineer – Professional, Solutions Architect – Associate.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Clouds -->
-    <section>
-      <h2>Cloud Platforms</h2>
-      <div class="clouds">
-        <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png" alt="AWS">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Azure">
-        <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="GCP">
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section>
-      <h2>Certifications</h2>
-      <div class="certifications">
-        <span>AWS Certified</span>
-      </div>
-    </section>
-
-    <!-- Links -->
-    <section>
-      <h2>Connect with Me</h2>
+    <!-- CONTACT LINKS (secondary) -->
+    <section class="card">
+      <h2>Connect</h2>
+      <p class="subtle">I’m always open to discussing DevOps, cloud, and automation initiatives.</p>
       <div class="links">
-        <a href="https://www.linkedin.com/in/usmangd" target="_blank" class="linkedin">LinkedIn</a>
-        <a href="https://github.com/ug-devops" target="_blank" class="github">GitHub</a>
-        <a href="mailto:ug.khan@hotmail.com" class="email">Email</a>
-        <a href="https://www.linkedin.com/in/usmangd" target="_blank" class="resume">Resume</a>
+        <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn email" href="mailto:ug.khan@hotmail.com">Email</a>
+        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">Resume</a>
       </div>
     </section>
 
-  </div>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Usman | Built with ❤️ and DevOps mindset
+    © 2025 Usman Saleem · Built with ❤️ and a DevOps mindset
   </footer>
-
 </body>
 </html>
 
