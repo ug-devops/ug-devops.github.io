@@ -71,13 +71,13 @@
     .clouds{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:8px}
     .clouds img{height:42px}
 
-    /* Cert badges */
-    .badge-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+    /* Cert badges - all in one image */
+    .badge-row{display:flex;justify-content:center;margin-top:12px}
     .aws-badge{
-      width:160px; height:160px;
+      max-width:720px; height:auto;
       object-fit:contain;
-      border-radius:12px;background:white;padding:10px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      border-radius:16px;background:white;padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
     }
 
     .subtle{color:var(--muted)}
@@ -160,9 +160,7 @@
     <section class="card">
       <h2>Certifications</h2>
       <div class="badge-row">
-        <img class="aws-badge" src="devops-professional.png" alt="AWS DevOps Engineer - Professional">
-        <img class="aws-badge" src="solutions-architect-associate.png" alt="AWS Solutions Architect - Associate">
-        <img class="aws-badge" src="aws-ccp.png" alt="AWS Cloud Practitioner">
+        <img class="aws-badge" src="all-badges.png" alt="AWS Certifications">
       </div>
     </section>
 
