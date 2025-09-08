@@ -11,9 +11,12 @@
       --card: #ffffff;
       --ink: #1c2430;
       --muted: #64748b;
+      --brand: #0e76a8;
+      --brand2: #2c5364;
       --shadow: 0 8px 28px rgba(0, 0, 0, .12);
       --radius: 16px;
     }
+    * { box-sizing: border-box }
     body {
       margin: 0;
       background: var(--bg);
@@ -41,6 +44,11 @@
       font-size: 2.4rem;
       margin: 6px 0 6px;
     }
+    header p {
+      margin: 0;
+      opacity: .95;
+      font-size: 1.05rem;
+    }
     .container {
       max-width: 1000px;
       margin: -64px auto 40px;
@@ -52,11 +60,13 @@
       box-shadow: var(--shadow);
       padding: 24px;
     }
+    section { margin-bottom: 28px }
     h2 {
       font-size: 1.35rem;
       margin: 0 0 16px;
+      color: var(--ink);
       padding-left: 10px;
-      border-left: 4px solid #2563eb;
+      border-left: 4px solid var(--brand);
     }
     .links {
       display: flex;
@@ -76,12 +86,16 @@
       font-weight: 600;
       transition: transform .2s ease, opacity .2s ease;
     }
-    .btn img { width: 20px; height: 20px }
+    .btn img { width: 20px; height: 20px; }
     .btn:hover { transform: translateY(-2px); opacity: .92 }
-    .linkedin { background: #0077b5 }
-    .github { background: #333 }
-    .email { background: #d14836 }
-    .resume { background: #2563eb }
+    .btn.linkedin { background: #0e76a8 }
+    .btn.github { background: #24292e }
+    .btn.email { background: #d44638 }
+    .btn.resume { background: var(--brand2) }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 1.2fr .8fr }
+    }
     .pillset { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px }
     .pill {
       background: #e7edf6;
@@ -99,6 +113,8 @@
       margin-top: 8px;
     }
     .clouds img { height: 42px }
+    .list { margin: 8px 0 0 20px }
+    .subtle { color: var(--muted) }
     .badge-row {
       display: flex;
       gap: 16px;
@@ -112,6 +128,8 @@
       text-align: center;
       padding: 22px 16px;
     }
+    .lead { font-size: 1.05rem }
+    .divider { height: 1px; background: #e5e7eb; margin: 16px 0 }
   </style>
 </head>
 <body>
@@ -122,48 +140,118 @@
     <h1>Usman Saleem</h1>
     <p>Senior DevOps Engineer · AWS Certified · Kubernetes · Automation Enthusiast</p>
 
-    <div class="links">
+    <div class="links" aria-label="Primary links">
       <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""> LinkedIn
       </a>
       <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"> GitHub
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> GitHub
       </a>
       <a class="btn email" href="mailto:ug.khan@hotmail.com">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email"> Email
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt=""> Email
       </a>
       <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Resume"> Resume
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt=""> Resume
       </a>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- ABOUT -->
+    <!-- ABOUT with full bio -->
     <section class="card">
-      <h2>About Me</h2>
-      <p><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
-      <p>With 10+ years of experience ... (your full bio text goes here unchanged)</p>
-    </section>
+      <div class="grid about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p class="lead"><strong>Senior DevOps Engineer | AWS Certified | Kubernetes | Automation Enthusiast</strong></p>
 
-    <!-- CLOUDS -->
-    <section class="card">
-      <h2>Cloud Platforms</h2>
-      <div class="clouds">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS logo" />
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftazure.svg" alt="Azure logo" />
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud logo" />
+          <p>With 10+ years of experience in the software development and digital transformation space, I specialize in delivering reliable, efficient, and secure DevOps solutions. As a Senior DevOps Engineer at <strong>Code UpScale</strong>, I thrive in fast-paced, dynamic environments, supporting both the company's operations and its clients' infrastructure needs.</p>
+
+          <p><strong>Core Expertise:</strong></p>
+          <ul class="list">
+            <li><strong>DevOps Tools &amp; Platforms:</strong> Proficient in Linux, OpenShift, Kubernetes, Docker, Terraform, Jenkins, and the ELK Stack.</li>
+            <li><strong>Cloud &amp; Automation:</strong> Deep experience with AWS, managing and automating cloud infrastructure to enhance scalability and performance.</li>
+            <li><strong>Version Control &amp; CI/CD Pipelines:</strong> Expertise in GitHub, GitLab, and Jenkins, ensuring smooth and automated code deployments.</li>
+          </ul>
+
+          <p><strong>AWS Certifications:</strong></p>
+          <ul class="list">
+            <li>AWS Certified DevOps Engineer - Professional</li>
+            <li>AWS Certified Solutions Architect - Associate (SAA-C03)</li>
+            <li>AWS Certified Cloud Practitioner</li>
+          </ul>
+
+          <p><strong>Passion for Cybersecurity:</strong></p>
+          <p>Alongside my core DevOps responsibilities, I have a keen interest in cybersecurity practices, ensuring infrastructure security and compliance with industry standards.</p>
+
+          <p><strong>Ongoing Learning &amp; Projects:</strong></p>
+          <p>In addition to my current skill set, I’m continuously exploring and integrating new technologies into my workflow to stay ahead of the curve. Some of the tools and platforms I'm currently learning and working on include:</p>
+          <ul class="list">
+            <li>ArgoCD, Python, SonarQube</li>
+            <li>GitHub Actions, WSO2, Ansible</li>
+          </ul>
+
+          <p>I am always eager to learn and grow in the field of DevOps, bringing value to every project I contribute to. If you're looking for someone who can optimize your cloud and DevOps practices, let's connect!</p>
+
+          <p>📧 Email: <a href="mailto:ug.khan@hotmail.com">ug.khan@hotmail.com</a></p>
+        </div>
+
+        <!-- quick summary card -->
+        <div>
+          <h2>Snapshot</h2>
+          <div class="pillset" aria-label="Key skills">
+            <span class="pill">Linux</span>
+            <span class="pill">OpenShift</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">GitLab CI/CD</span>
+            <span class="pill">Ansible</span>
+            <span class="pill">Prometheus</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">ELK Stack</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Cloud Platforms</h2>
+          <div class="clouds">
+            <img src="https://cdn-icons-png.flaticon.com/512/5969/5969123.png" alt="AWS logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft Azure logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="Google Cloud Platform logo" />
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Certifications</h2>
+          <div class="badge-row">
+            <img class="aws-badge" src="https://d1.awsstatic.com/training-and-certification/badges/AWS-Certified-Cloud-Practitioner_badge.png" alt="AWS Certified Cloud Practitioner badge" />
+          </div>
+          <p class="subtle">Also: AWS DevOps Engineer – Professional, AWS Solutions Architect – Associate.</p>
+        </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
+    <!-- CONTACT LINKS (secondary) -->
     <section class="card">
-      <h2>Certifications</h2>
-      <div class="badge-row">
-        <img class="aws-badge" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified-Cloud-Practitioner_badge.9d1a5e6cdab7a55d14eecf3db5e6b6f5e9a41d89.png" alt="AWS Cloud Practitioner Badge" />
+      <h2>Connect with Me</h2>
+      <p class="subtle">I’m always open to discussing DevOps, cloud, and automation initiatives.</p>
+      <div class="links">
+        <a class="btn linkedin" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""> LinkedIn
+        </a>
+        <a class="btn github" href="https://github.com/ug-devops" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> GitHub
+        </a>
+        <a class="btn email" href="mailto:ug.khan@hotmail.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt=""> Email
+        </a>
+        <a class="btn resume" href="https://www.linkedin.com/in/usmangd" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt=""> Resume
+        </a>
       </div>
-      <p>Also: AWS DevOps Engineer – Professional, AWS Solutions Architect – Associate.</p>
     </section>
 
   </main>
